@@ -1,0 +1,897 @@
+body {
+    background-color: rgb(22, 21, 21);
+    color: white;
+}
+
+div,
+h2 {
+    view-timeline-name: --div;
+    view-timeline-axis: block;
+
+    animation-timeline: --div;
+    animation-name: scroll;
+    animation-range: entry 10% cover 35%;
+    animation-fill-mode: initial;
+}
+
+
+
+
+/* -----SECCION NAV----- */
+.BarraNav {
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    background-color: rgb(195, 84, 75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    height: auto;
+    max-width: 50px;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menutoggle {
+
+    position: fixed;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background: #F3E5AB url(media/close.png);
+    background-size: 35px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 1.2s;
+    z-index: 200;
+    border: 1px black;
+}
+
+.menutoggle.active {
+    background: url(media/menuicon.png);
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.sidebar {
+    position: fixed;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    padding: 70px;
+    z-index: 100;
+    right: -100%;
+    height: 600px;
+    top: -2%;
+}
+
+.sidebar.active {
+    right: 0;
+
+}
+
+.sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin-bottom: 35px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    margin-bottom: 35px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+
+
+nav .lista {
+    position: relative;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 255, 234, 0);
+    display: inline-block;
+    transition: .5s;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background-color: orangered;
+    border-radius: 10px;
+    transition: 1s;
+    color: black;
+}
+
+nav .lista span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .3s;
+}
+
+nav .lista:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+
+/* -----SECCION 1----- */
+.SeccionInicial {
+    padding: 3%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.Titulo-sec1 {
+    background-color: rgb(195, 84, 75);
+    color: white;
+    margin-left: 0%;
+    height: 80px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.contenedorPrincipal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Introduccion,
+.ImagenInic {
+    text-align: center;
+}
+
+
+.Introduccion {
+    width: 45%;
+    padding: 30px;
+    margin-right: 80px;
+    box-sizing: border-box;
+}
+
+.ImagenInic {
+    width: 45%;
+    padding: 1%;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.TextoIntro {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: justify;
+    padding-top: 30px;
+    margin-left: 60px;
+    position: relative;
+
+}
+
+.Kobeni {
+    max-width: 50%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.Kobeni:hover {
+    transform: scale(1.1);
+}
+
+/* -----SECCION 2----- */
+.seccion2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    background-color: rgb(29, 28, 28);
+}
+
+
+.imgSec2 {
+    position: relative;
+}
+
+.makima {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+.makima:hover {
+    transform: scale(1.1);
+}
+
+.textSec2 {
+    width: 608px;
+}
+
+.tituloMkm {
+    text-align: left;
+}
+
+.parrafoMkm {
+    text-align: justify;
+    padding-right: 15%;
+
+}
+
+.textSec2 {
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.textSec2:hover {
+    transform: translateX(20px);
+
+}
+
+/* -----SECCION 3----- */
+.seccion3 {
+
+    margin: 0 auto;
+
+}
+
+.guineo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+    padding-bottom: 34px;
+    justify-content: space-between;
+}
+
+.titu {
+    font-size: 32px;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+.columna {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.lapices,
+.tigre {
+    height: 500px;
+    width: 400px;
+    max-width: 60%;
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.texto1,
+.texto2 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+
+/* -----SECCION 4----- */
+.seccion4 {
+    background-color: rgb(29, 28, 28);
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.cazadores {
+    align-items: center;
+    justify-content: center;
+}
+
+.imgcont {
+    width: 15%;
+    height: 15%;
+    padding: 1%;
+    text-align: center;
+}
+
+.info2 {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.botonRandom {
+    position: relative;
+}
+
+.Boton-sec4 {
+    position: absolute;
+    background-color: rgb(199, 59, 46);
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 50px;
+}
+
+
+/*-----SECCION DE DEMONIOS----- */
+
+.Demonios {
+    padding: 3%;
+}
+
+/*Estilo del titulo de la seccion*/
+.tituloDem {
+    text-align: center;
+}
+
+/*Estilos de los contenedores de la seccion*/
+.ContGeneral {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ContDem {
+    width: 90%;
+    margin: 5px;
+    outline: 2px solid rgb(70, 67, 67, 0.5);
+    text-align: center;
+}
+
+.ContenidoDem {
+    padding: 10px;
+    display: flex;
+}
+
+.ContenedorImgDem,
+.ContenedorTextDem {
+    text-align: center;
+}
+
+.ImgDem {
+    width: 250px;
+    height: 280px;
+    padding: 3%;
+}
+
+.ContenedorTextDem {
+    width: 45%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 60%;
+    margin: auto;
+}
+
+.DescDem {
+    text-align: justify;
+    padding: 3%;
+    margin: 0;
+}
+
+/*Estilos botones*/
+#prevBtn,
+#nextBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+button[id="prevBtn"],
+button[ id="nextBtn"] {
+    background-color: rgb(199, 59, 46);
+    color: white;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 50px;
+}
+
+button[id="prevBtn"]:hover,
+button[ id="nextBtn"]:hover {
+    background-color: rgb(195, 84, 75);
+}
+
+.hide-prev {
+    transform: translateX(-100%);
+}
+
+.hide-next {
+    transform: translateX(100%);
+}
+
+.ContenedorBotones {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+#prevBtn,
+#nextBtn {
+    background-color: rgb(199, 59, 46);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%;
+    margin: 10px;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    background-color: rgb(195, 84, 75);
+}
+
+
+/* -----SECCION 5----- */
+.Contratos {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(29, 28, 28);
+}
+
+.columna {
+    flex: 1;
+    padding: 2%;
+    box-sizing: border-box;
+    text-align: center;
+    color: rgb(196, 196, 196);
+}
+
+.imgContract {
+    height: 300px;
+    width: 450px;
+    max-width: 80%;
+    object-fit: cover;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+    margin-top: 20%;
+    margin-bottom: 15%;
+}
+
+.tituloContract {
+    font-size: 28px;
+    color: #ffffff;
+    margin: 1%;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20%;
+    text-transform: uppercase;
+}
+
+.descContract {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+button[type="button"] {
+    background-color: rgb(199, 59, 46);
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    border-radius: 50px;
+}
+
+button[type="button"]:hover {
+    background-color: rgb(195, 84, 75);
+}
+
+.imgContract:hover {
+    transform: scale(1.1);
+}
+
+/* -----SECCION 6----- */
+.seccionDform {
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+form {
+    background-color: rgb(22, 21, 21);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    border-radius: 20px;
+    padding-bottom: 25px;
+
+}
+
+.titulon {
+    font-size: 28px;
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.espacio {
+    height: 30px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.espacio1 {
+    height: 50px;
+    background-color: rgb(145, 175, 147);
+    border: none;
+    border-radius: 15px;
+}
+
+.espacio3 {
+    height: 58px;
+}
+
+label {
+    margin-right: 20px;
+    color: white;
+    font-size: large;
+}
+
+input[type="text"],
+textarea {
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(145, 175, 147);
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.BtnSubmit {
+    text-align: center;
+}
+
+button[type="submit"] {
+    background-color: rgb(199, 59, 46);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(195, 84, 75);
+}
+
+
+
+/****************************************************************************/
+/*Estilos juego*/
+.contenedorJuego {
+    height: 85vmin;
+}
+
+
+.contenedorSerp {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 5px;
+    /*Color de fondo del contenedor principal*/
+    background-color: #293447;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.detalles {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconoPochita {
+    width: 40px;
+}
+
+.tablero {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    /*Color de fondo del tablero*/
+    background-color: #212837;
+
+}
+
+/*Color de la comida*/
+.tablero .comida {
+    background-color: rgb(199, 59, 46);
+}
+
+/*Color de la serpiente*/
+.tablero .cabeza {
+    background-color: #ffffff;
+}
+
+/****************************************************************************/
+
+.footerbg {
+    background-color: black;
+    width: 100%;
+    height: 200px;
+}
+
+.footer-contenedor {
+    width: 95%;
+    height: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-utp {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    display: block;
+}
+
+.Dlogo {
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilos en dispositivos pequqños */
+@media (max-width: 800px) {
+
+    /* Seccion 1 en pantallas mas pequeñas */
+    .SeccionInicial {
+        padding: 2%;
+    }
+
+    .Titulo-sec1 {
+        font-size: 24px;
+    }
+
+    .contenedorPrincipal {
+        flex-direction: column;
+    }
+
+    .Introduccion {
+        width: 95%;
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .ImagenInic {
+        margin: 0 auto;
+    }
+
+    .Kobeni {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    /* Seccion 2 en pantallas mas pequeñas */
+    .seccion2 {
+        padding: 2%;
+        padding-bottom: 10%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imgSec2 {
+        padding-top: 10%;
+        width: 60%;
+        text-align: center;
+    }
+
+    .makima {
+        height: auto;
+    }
+
+    .tituloMkm {
+        text-align: center;
+    }
+
+    .textSec2 {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .parrafoMkm {
+        text-align: justify;
+        font-size: 15px;
+        width: 85%;
+        padding: 1%;
+    }
+
+
+    /* Seccion 3 en pantallas mas pequeñas */
+    .seccion3 {
+        padding: 2%;
+        padding-top: 10%;
+        justify-content: center;
+    }
+
+    .guineo {
+        flex-direction: column;
+    }
+
+    .titu {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .lapices,
+    .tigre {
+        height: auto;
+        width: auto;
+    }
+
+    .texto1,
+    .texto2 {
+        font-size: 15px;
+    }
+
+    /* Seccion 4 en pantallas mas pequeñas */
+    .seccion4 {
+        padding-top: 10%;
+        flex-direction: column;
+    }
+
+    .Titulo-sec4 {
+        font-size: 20px;
+    }
+
+    .info2 {
+        font-size: 15px;
+    }
+
+    /* Seccion "demonios" en pantallas mas pequeñas */
+    .Demonios {
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .tituloDem {
+        font-size: 20px;
+    }
+
+    .ContDem {
+        padding: 4%;
+    }
+
+    .ImgDem {
+        height: 250px;
+        width: auto;
+
+    }
+
+    .DescDem {
+        font-size: 15px;
+    }
+
+    /* Seccion 5 en pantallas mas pequeñas */
+    .Contratos {
+        flex-direction: column;
+        padding-bottom: 5%;
+    }
+
+    .imgContract {
+        height: auto;
+
+    }
+
+    .tituloContract {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .descContract {
+        font-size: 15px;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 5%;
+    }
+
+    /* Seccion del formulario en pantallas mas pequeñas */
+    .campo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .titulon {
+        font-size: 20px;
+    }
+
+    .espacio {
+        padding-top: 20%;
+    }
+}
